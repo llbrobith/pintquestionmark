@@ -25,38 +25,31 @@
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--ink); min-height: 100vh; font-size: 15px; }
-
   header { background: var(--ink); color: var(--amber-light); padding: 0 1.5rem; display: flex; align-items: center; justify-content: space-between; height: 60px; position: sticky; top: 0; z-index: 100; }
   .logo { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 900; letter-spacing: -0.5px; color: var(--amber-light); }
   .logo span { color: #fff; font-size: 20px; margin-left: 2px; }
   .sync-dot { width: 8px; height: 8px; border-radius: 50%; background: #888; display: inline-block; margin-right: 6px; transition: background 0.3s; }
   .sync-dot.live { background: #4CAF50; }
   .sync-dot.error { background: #E53935; }
-
   nav { background: var(--foam); border-bottom: 1px solid var(--border); display: flex; overflow-x: auto; scrollbar-width: none; }
   nav::-webkit-scrollbar { display: none; }
   .nav-btn { padding: 14px 20px; border: none; background: transparent; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; color: var(--ink-light); cursor: pointer; white-space: nowrap; border-bottom: 3px solid transparent; transition: color 0.15s, border-color 0.15s; }
   .nav-btn.active { color: var(--amber); border-bottom-color: var(--amber); }
   .nav-btn:hover { color: var(--ink); }
-
   main { max-width: 680px; margin: 0 auto; padding: 1.5rem 1rem 4rem; }
   .section { display: none; }
   .section.active { display: block; }
-
   .card { background: var(--foam); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem; margin-bottom: 1rem; }
   .card-title { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: var(--ink); margin-bottom: 1rem; }
-
   .metric-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 1.25rem; }
   @media (min-width: 480px) { .metric-grid { grid-template-columns: repeat(4, 1fr); } }
   .metric { background: var(--ink); border-radius: 10px; padding: 1rem; text-align: center; }
   .metric-val { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 900; color: var(--amber-light); line-height: 1; }
   .metric-lbl { font-size: 11px; color: rgba(255,255,255,0.55); margin-top: 4px; text-transform: uppercase; letter-spacing: 0.06em; }
-
   label { display: block; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-light); margin: 16px 0 6px; }
   label:first-child { margin-top: 0; }
   input[type=text], input[type=date], input[type=number], select { width: 100%; padding: 10px 14px; border: 1px solid var(--border); border-radius: 8px; background: var(--cream); font-family: 'DM Sans', sans-serif; font-size: 15px; color: var(--ink); outline: none; transition: border-color 0.15s; }
   input:focus, select:focus { border-color: var(--amber); }
-
   .btn { padding: 10px 20px; border-radius: 8px; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 600; cursor: pointer; border: 1px solid var(--border); background: var(--foam); color: var(--ink); transition: all 0.15s; }
   .btn:hover { background: var(--border); }
   .btn-primary { background: var(--amber); color: #fff; border-color: var(--amber); }
@@ -64,16 +57,13 @@
   .btn-sm { padding: 6px 12px; font-size: 13px; }
   .btn-danger { color: var(--red); border-color: #E8C4BE; }
   .btn-danger:hover { background: #FBF0EE; }
-
   .chip-group { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
   .chip { padding: 6px 14px; border-radius: 999px; font-size: 13px; font-weight: 500; cursor: pointer; border: 1px solid var(--border); background: var(--cream); color: var(--ink-mid); transition: all 0.12s; user-select: none; }
   .chip.selected { background: var(--ink); color: var(--amber-light); border-color: var(--ink); }
   .chip-del { cursor: pointer; margin-left: 4px; color: var(--ink-light); font-size: 16px; }
-
   .period-row { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 1.25rem; }
   .period-btn { padding: 6px 16px; border-radius: 999px; font-size: 13px; font-weight: 500; cursor: pointer; border: 1px solid var(--border); background: var(--foam); color: var(--ink-mid); transition: all 0.12s; }
   .period-btn.active { background: var(--amber); color: #fff; border-color: var(--amber); }
-
   .session-item { display: flex; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--border); align-items: flex-start; }
   .session-item:last-child { border-bottom: none; }
   .session-date-badge { background: var(--ink); color: var(--amber-light); border-radius: 8px; padding: 6px 10px; text-align: center; min-width: 48px; flex-shrink: 0; }
@@ -86,7 +76,6 @@
   .att-chip { font-size: 11px; background: var(--amber-pale); border: 1px solid #EDD9A3; border-radius: 999px; padding: 2px 8px; color: var(--ink-mid); }
   .session-pints { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 900; color: var(--amber); text-align: right; }
   .session-pints-lbl { font-size: 10px; color: var(--ink-light); text-align: right; text-transform: uppercase; letter-spacing: 0.05em; }
-
   .lb-row { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--border); }
   .lb-row:last-child { border-bottom: none; }
   .lb-rank { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 900; min-width: 32px; color: var(--ink-light); }
@@ -97,7 +86,6 @@
   .lb-bar-wrap { flex: 2; height: 8px; background: var(--border); border-radius: 999px; overflow: hidden; }
   .lb-bar { height: 100%; background: var(--amber); border-radius: 999px; transition: width 0.4s ease; }
   .lb-val { font-weight: 600; min-width: 40px; text-align: right; color: var(--ink-mid); font-size: 14px; }
-
   .pints-row { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--border); }
   .pints-row:last-child { border-bottom: none; }
   .pints-name { flex: 1; font-weight: 500; }
@@ -105,17 +93,14 @@
   .pints-adj { width: 32px; height: 32px; border: 1px solid var(--border); border-radius: 6px; background: var(--cream); font-size: 18px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; color: var(--ink); user-select: none; transition: background 0.1s; }
   .pints-adj:hover { background: var(--border); }
   .pints-count { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 900; color: var(--amber); min-width: 28px; text-align: center; }
-
   .chart-wrap { position: relative; width: 100%; height: 200px; }
   .member-tag { display: inline-flex; align-items: center; gap: 6px; background: var(--amber-pale); border: 1px solid #EDD9A3; border-radius: 999px; padding: 5px 14px; font-size: 13px; font-weight: 500; color: var(--ink-mid); }
   .divider { border: none; border-top: 1px solid var(--border); margin: 1.25rem 0; }
   h2.section-title { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; margin-bottom: 1.25rem; color: var(--ink); }
   .empty { text-align: center; padding: 2.5rem 1rem; color: var(--ink-light); font-size: 14px; }
   .empty-icon { font-size: 40px; display: block; margin-bottom: 0.5rem; }
-
   .success-toast { display: none; position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); background: var(--green); color: #fff; padding: 12px 24px; border-radius: 999px; font-size: 14px; font-weight: 600; z-index: 999; box-shadow: 0 4px 20px rgba(0,0,0,0.15); animation: slideup 0.25s ease; }
   @keyframes slideup { from { opacity:0; transform: translateX(-50%) translateY(12px); } to { opacity:1; transform: translateX(-50%) translateY(0); } }
-
   .loading { text-align: center; padding: 3rem; color: var(--ink-light); }
   .loading-spinner { width: 32px; height: 32px; border: 3px solid var(--border); border-top-color: var(--amber); border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 1rem; }
   @keyframes spin { to { transform: rotate(360deg); } }
@@ -140,7 +125,6 @@
 
 <main>
 
-  <!-- LOG -->
   <div class="section active" id="sec-log">
     <h2 class="section-title">Log a session</h2>
     <div class="card">
@@ -162,7 +146,6 @@
     </div>
   </div>
 
-  <!-- HISTORY -->
   <div class="section" id="sec-history">
     <h2 class="section-title">Session history</h2>
     <div class="card">
@@ -170,7 +153,6 @@
     </div>
   </div>
 
-  <!-- STATS -->
   <div class="section" id="sec-stats">
     <div class="period-row" id="stats-period-row">
       <button class="period-btn active" onclick="setPeriod('month',this)">This month</button>
@@ -185,21 +167,20 @@
       <button class="stats-view-btn" onclick="setStatsView('venue',this)" style="flex:1;padding:9px;font-size:13px;font-weight:600;border:none;border-left:1px solid var(--border);background:var(--foam);color:var(--ink-mid);cursor:pointer;">By venue</button>
     </div>
     <div id="stats-total">
-      <div class="card"><div class="card-title">Sessions per month</div><div class="chart-wrap"><canvas id="sessions-chart" role="img" aria-label="Sessions per month">Sessions per month</canvas></div></div>
-      <div class="card"><div class="card-title">Pints per month</div><div class="chart-wrap"><canvas id="pints-chart" role="img" aria-label="Pints per month">Pints per month</canvas></div></div>
+      <div class="card"><div class="card-title">Sessions per month</div><div class="chart-wrap"><canvas id="sessions-chart"></canvas></div></div>
+      <div class="card"><div class="card-title">Pints per month</div><div class="chart-wrap"><canvas id="pints-chart"></canvas></div></div>
     </div>
     <div id="stats-member" style="display:none;">
-      <div class="card"><div class="card-title">Sessions attended per person</div><div class="chart-wrap" id="member-sessions-wrap"><canvas id="member-sessions-chart" role="img" aria-label="Sessions per member">Sessions per member</canvas></div></div>
-      <div class="card"><div class="card-title">Pints consumed per person</div><div class="chart-wrap" id="member-pints-wrap"><canvas id="member-pints-chart" role="img" aria-label="Pints per member">Pints per member</canvas></div></div>
-      <div class="card"><div class="card-title">Attendance over time</div><div class="chart-wrap" style="height:240px;"><canvas id="member-trend-chart" role="img" aria-label="Attendance over time">Attendance over time</canvas></div></div>
+      <div class="card"><div class="card-title">Sessions attended per person</div><div class="chart-wrap" id="member-sessions-wrap"><canvas id="member-sessions-chart"></canvas></div></div>
+      <div class="card"><div class="card-title">Pints consumed per person</div><div class="chart-wrap" id="member-pints-wrap"><canvas id="member-pints-chart"></canvas></div></div>
+      <div class="card"><div class="card-title">Attendance over time</div><div class="chart-wrap" style="height:240px;"><canvas id="member-trend-chart"></canvas></div></div>
     </div>
     <div id="stats-venue" style="display:none;">
-      <div class="card"><div class="card-title">Sessions by venue</div><div class="chart-wrap" id="venue-sessions-wrap"><canvas id="venue-sessions-chart" role="img" aria-label="Sessions by venue">Sessions by venue</canvas></div></div>
-      <div class="card"><div class="card-title">Pints by venue</div><div class="chart-wrap" id="venue-pints-wrap"><canvas id="venue-pints-chart" role="img" aria-label="Pints by venue">Pints by venue</canvas></div></div>
+      <div class="card"><div class="card-title">Sessions by venue</div><div class="chart-wrap" id="venue-sessions-wrap"><canvas id="venue-sessions-chart"></canvas></div></div>
+      <div class="card"><div class="card-title">Pints by venue</div><div class="chart-wrap" id="venue-pints-wrap"><canvas id="venue-pints-chart"></canvas></div></div>
     </div>
   </div>
 
-  <!-- LEADERBOARD -->
   <div class="section" id="sec-leaderboard">
     <div class="period-row" id="lb-period-row">
       <button class="period-btn active" onclick="setLbPeriod('month',this)">This month</button>
@@ -211,7 +192,6 @@
     <div class="card"><div class="card-title">Most pints</div><div id="lb-pints"></div></div>
   </div>
 
-  <!-- MEMBERS -->
   <div class="section" id="sec-members">
     <h2 class="section-title">Group members</h2>
     <div class="card">
@@ -229,10 +209,9 @@
 
 <div class="success-toast" id="toast"></div>
 
-<!-- Firebase -->
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-import { getFirestore, collection, doc, addDoc, deleteDoc, onSnapshot, setDoc, getDocs } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+import { getFirestore, collection, doc, addDoc, deleteDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAxf_bXBSETybhcynTaJIbQD5-GKtFynnk",
@@ -246,7 +225,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-// ── State ──────────────────────────────────────────────
 let members = [];
 let sessions = [];
 let selectedAttendees = new Set();
@@ -255,10 +233,8 @@ let currentPeriod = 'month';
 let currentLbPeriod = 'month';
 let currentStatsView = 'total';
 let chartSessions=null, chartPints=null, chartMemberSessions=null, chartMemberPints=null, chartMemberTrend=null, chartVenueSessions=null, chartVenuePints=null;
-
 const CHART_COLORS = ['#D4801A','#1A1208','#2D6A4F','#7B5EA7','#A33B2A','#3B7ABF','#8C7B65','#5A8A3C','#C47A3A','#4A6B8A'];
 
-// ── Sync indicator ─────────────────────────────────────
 function setSyncStatus(state) {
   const dot = document.getElementById('sync-dot');
   const lbl = document.getElementById('sync-label');
@@ -267,16 +243,13 @@ function setSyncStatus(state) {
   else { dot.className='sync-dot'; lbl.textContent='Connecting...'; }
 }
 
-// ── Toast ──────────────────────────────────────────────
 function toast(msg) {
   const el = document.getElementById('toast');
   el.textContent = msg;
   el.style.display = 'block';
   setTimeout(() => el.style.display = 'none', 2400);
 }
-window.toast = toast;
 
-// ── Navigation ─────────────────────────────────────────
 window.showSection = function(id) {
   document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
   document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
@@ -289,8 +262,6 @@ window.showSection = function(id) {
   if (id === 'members') renderMembersPage();
 }
 
-// ── Firebase listeners ─────────────────────────────────
-// Members
 onSnapshot(collection(db, 'members'),
   snap => {
     members = snap.docs.map(d => ({ id: d.id, ...d.data() })).sort((a,b) => a.name.localeCompare(b.name));
@@ -301,12 +272,10 @@ onSnapshot(collection(db, 'members'),
   err => { console.error(err); setSyncStatus('error'); }
 );
 
-// Sessions
 onSnapshot(collection(db, 'sessions'),
   snap => {
     sessions = snap.docs.map(d => ({ id: d.id, ...d.data() })).sort((a,b) => b.date.localeCompare(a.date));
     setSyncStatus('live');
-    // refresh whichever tab is active
     const active = document.querySelector('.section.active')?.id;
     if (active === 'sec-history') renderHistory();
     if (active === 'sec-stats') renderStats();
@@ -315,7 +284,6 @@ onSnapshot(collection(db, 'sessions'),
   err => { console.error(err); setSyncStatus('error'); }
 );
 
-// ── Members ────────────────────────────────────────────
 window.addMember = async function() {
   const inp = document.getElementById('new-member');
   const name = inp.value.trim();
@@ -325,7 +293,7 @@ window.addMember = async function() {
 }
 
 window.removeMember = async function(id, name) {
-  if (!confirm(`Remove ${name}?`)) return;
+  if (!confirm('Remove ' + name + '?')) return;
   await deleteDoc(doc(db, 'members', id));
   selectedAttendees.delete(name);
   renderAttendeeChips();
@@ -334,16 +302,15 @@ window.removeMember = async function(id, name) {
 function renderMembersPage() {
   const el = document.getElementById('members-display');
   el.innerHTML = members.length
-    ? members.map(m => `<span class="member-tag">${m.name} <span class="chip-del" onclick="removeMember('${m.id}','${m.name.replace(/'/g,"\\'")}')">×</span></span>`).join('')
+    ? members.map(m => '<span class="member-tag">' + m.name + ' <span class="chip-del" onclick="removeMember(\'' + m.id + '\',\'' + m.name.replace(/'/g,"\\'") + '\')">×</span></span>').join('')
     : '<span style="font-size:13px;color:var(--ink-light);">No members yet</span>';
 }
 
-// ── Log form ───────────────────────────────────────────
 function renderAttendeeChips() {
   const el = document.getElementById('attendee-chips');
   if (!members.length) { el.innerHTML = '<span style="font-size:13px;color:var(--ink-light);">Add members first via the Members button</span>'; return; }
   el.innerHTML = members.map(m =>
-    `<span class="chip ${selectedAttendees.has(m.name)?'selected':''}" onclick="toggleAttendee('${m.name.replace(/'/g,"\\'")}') ">${m.name}</span>`
+    '<span class="chip ' + (selectedAttendees.has(m.name)?'selected':'') + '" onclick="toggleAttendee(\'' + m.name.replace(/'/g,"\\'") + '\')">' + m.name + '</span>'
   ).join('');
   renderPintsInputs();
 }
@@ -359,21 +326,14 @@ function renderPintsInputs() {
   const container = document.getElementById('pints-inputs');
   if (!selectedAttendees.size) { section.style.display = 'none'; return; }
   section.style.display = 'block';
-  container.innerHTML = [...selectedAttendees].map(m => `
-    <div class="pints-row">
-      <div class="pints-name">${m}</div>
-      <div class="pints-ctrl">
-        <div class="pints-adj" onclick="adjustPints('${m.replace(/'/g,"\\'")}', -1)">−</div>
-        <div class="pints-count" id="pc-${CSS.escape(m)}">${pintsMap[m] || 0}</div>
-        <div class="pints-adj" onclick="adjustPints('${m.replace(/'/g,"\\'")}', 1)">+</div>
-      </div>
-    </div>
-  `).join('');
+  container.innerHTML = [...selectedAttendees].map(m =>
+    '<div class="pints-row"><div class="pints-name">' + m + '</div><div class="pints-ctrl"><div class="pints-adj" onclick="adjustPints(\'' + m.replace(/'/g,"\\'") + '\',-1)">−</div><div class="pints-count" id="pc-' + m.replace(/\s/g,'_') + '">' + (pintsMap[m]||0) + '</div><div class="pints-adj" onclick="adjustPints(\'' + m.replace(/'/g,"\\'") + '\',1)">+</div></div></div>'
+  ).join('');
 }
 
 window.adjustPints = function(name, delta) {
   pintsMap[name] = Math.max(0, (pintsMap[name] || 0) + delta);
-  const el = document.getElementById('pc-' + CSS.escape(name));
+  const el = document.getElementById('pc-' + name.replace(/\s/g,'_'));
   if (el) el.textContent = pintsMap[name];
 }
 
@@ -385,8 +345,13 @@ window.logSession = async function() {
   const pints = {};
   let total = 0;
   for (const m of selectedAttendees) { pints[m] = pintsMap[m] || 0; total += pints[m]; }
-  const session = { date, pub: pub || 'Unknown pub', attendees: [...selectedAttendees], pints, totalPints: total, notes: document.getElementById('log-notes').value.trim(), createdAt: new Date().toISOString() };
-  await addDoc(collection(db, 'sessions'), session);
+  await addDoc(collection(db, 'sessions'), {
+    date, pub: pub || 'Unknown pub',
+    attendees: [...selectedAttendees],
+    pints, totalPints: total,
+    notes: document.getElementById('log-notes').value.trim(),
+    createdAt: new Date().toISOString()
+  });
   selectedAttendees = new Set();
   pintsMap = {};
   document.getElementById('log-pub').value = '';
@@ -395,7 +360,6 @@ window.logSession = async function() {
   toast('Session saved! 🍺');
 }
 
-// ── History ────────────────────────────────────────────
 function renderHistory() {
   const el = document.getElementById('history-list');
   if (!sessions.length) { el.innerHTML = '<div class="empty"><span class="empty-icon">🍺</span>No sessions logged yet</div>'; return; }
@@ -405,32 +369,16 @@ function renderHistory() {
     const mon = d.toLocaleString('default', { month: 'short' });
     const yr = d.getFullYear();
     const thisYr = new Date().getFullYear();
-    return `<div class="session-item">
-      <div class="session-date-badge">
-        <div class="session-date-day">${day}</div>
-        <div class="session-date-mon">${mon}${yr !== thisYr ? ' '+yr : ''}</div>
-      </div>
-      <div class="session-body">
-        <div class="session-pub">${s.pub}</div>
-        <div class="session-meta">${s.attendees.length} people${s.notes ? ' · '+s.notes : ''}</div>
-        <div class="session-att">${s.attendees.map(a => `<span class="att-chip">${a} · ${s.pints[a]||0}🍺</span>`).join('')}</div>
-      </div>
-      <div>
-        <div class="session-pints">${s.totalPints}</div>
-        <div class="session-pints-lbl">pints</div>
-        <button class="btn btn-sm btn-danger" style="margin-top:10px;" onclick="deleteSession('${s.id}')">✕</button>
-      </div>
-    </div>`;
+    return '<div class="session-item"><div class="session-date-badge"><div class="session-date-day">' + day + '</div><div class="session-date-mon">' + mon + (yr !== thisYr ? ' '+yr : '') + '</div></div><div class="session-body"><div class="session-pub">' + s.pub + '</div><div class="session-meta">' + s.attendees.length + ' people' + (s.notes ? ' · '+s.notes : '') + '</div><div class="session-att">' + s.attendees.map(a => '<span class="att-chip">'+a+' · '+(s.pints[a]||0)+'🍺</span>').join('') + '</div></div><div><div class="session-pints">' + s.totalPints + '</div><div class="session-pints-lbl">pints</div><button class="btn btn-sm btn-danger" style="margin-top:10px;" onclick="deleteSession(\'' + s.id + '\')">✕</button></div></div>';
   }).join('');
 }
 
 window.deleteSession = async function(id) {
   if (!confirm('Delete this session?')) return;
   await deleteDoc(doc(db, 'sessions', id));
-  toast('Session deleted');
+  toast('Deleted');
 }
 
-// ── Filter ─────────────────────────────────────────────
 function filterByPeriod(period) {
   const now = new Date();
   return sessions.filter(s => {
@@ -453,7 +401,6 @@ function groupByMonth(list) {
   return g;
 }
 
-// ── Stats ──────────────────────────────────────────────
 window.setPeriod = function(p, btn) {
   currentPeriod = p;
   document.querySelectorAll('#stats-period-row .period-btn').forEach(b => b.classList.remove('active'));
@@ -476,11 +423,11 @@ function renderStats() {
   const totalPints = f.reduce((a,s)=>a+s.totalPints,0);
   const avgPints = f.length ? (totalPints/f.length).toFixed(1) : '0';
   const uniquePubs = new Set(f.map(s=>s.pub)).size;
-  document.getElementById('stat-metrics').innerHTML = `
-    <div class="metric"><div class="metric-val">${f.length}</div><div class="metric-lbl">Sessions</div></div>
-    <div class="metric"><div class="metric-val">${totalPints}</div><div class="metric-lbl">Total pints</div></div>
-    <div class="metric"><div class="metric-val">${avgPints}</div><div class="metric-lbl">Avg / session</div></div>
-    <div class="metric"><div class="metric-val">${uniquePubs}</div><div class="metric-lbl">Pubs visited</div></div>`;
+  document.getElementById('stat-metrics').innerHTML =
+    '<div class="metric"><div class="metric-val">'+f.length+'</div><div class="metric-lbl">Sessions</div></div>' +
+    '<div class="metric"><div class="metric-val">'+totalPints+'</div><div class="metric-lbl">Total pints</div></div>' +
+    '<div class="metric"><div class="metric-val">'+avgPints+'</div><div class="metric-lbl">Avg / session</div></div>' +
+    '<div class="metric"><div class="metric-val">'+uniquePubs+'</div><div class="metric-lbl">Pubs visited</div></div>';
   if (currentStatsView==='total') renderStatsTotal(f);
   else if (currentStatsView==='member') renderStatsMember(f);
   else renderStatsVenue(f);
@@ -491,9 +438,9 @@ function renderStatsTotal(f) {
   const labels = Object.keys(groups).sort();
   const disp = labels.map(l=>{ const [y,m]=l.split('-'); return new Date(y,m-1).toLocaleString('default',{month:'short',year:'2-digit'}); });
   if (chartSessions) chartSessions.destroy();
-  chartSessions = new Chart(document.getElementById('sessions-chart'),{ type:'bar', data:{ labels:disp, datasets:[{ data:labels.map(l=>groups[l].sessions), backgroundColor:'#1A1208', borderRadius:4 }] }, options:{ responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{ y:{beginAtZero:true,ticks:{stepSize:1,color:'#8C7B65'},grid:{color:'#E8DCC8'}}, x:{ticks:{color:'#8C7B65',autoSkip:false,maxRotation:45},grid:{display:false}} } } });
+  chartSessions = new Chart(document.getElementById('sessions-chart'),{ type:'bar', data:{ labels:disp, datasets:[{ data:labels.map(l=>groups[l].sessions), backgroundColor:'#1A1208', borderRadius:4 }] }, options:{ responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{ y:{beginAtZero:true,ticks:{stepSize:1,color:'#8C7B65'},grid:{color:'#E8DCC8'}}, x:{ticks:{color:'#8C7B65'},grid:{display:false}} } } });
   if (chartPints) chartPints.destroy();
-  chartPints = new Chart(document.getElementById('pints-chart'),{ type:'bar', data:{ labels:disp, datasets:[{ data:labels.map(l=>groups[l].pints), backgroundColor:'#D4801A', borderRadius:4 }] }, options:{ responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{ y:{beginAtZero:true,ticks:{color:'#8C7B65'},grid:{color:'#E8DCC8'}}, x:{ticks:{color:'#8C7B65',autoSkip:false,maxRotation:45},grid:{display:false}} } } });
+  chartPints = new Chart(document.getElementById('pints-chart'),{ type:'bar', data:{ labels:disp, datasets:[{ data:labels.map(l=>groups[l].pints), backgroundColor:'#D4801A', borderRadius:4 }] }, options:{ responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{ y:{beginAtZero:true,ticks:{color:'#8C7B65'},grid:{color:'#E8DCC8'}}, x:{ticks:{color:'#8C7B65'},grid:{display:false}} } } });
 }
 
 function renderStatsMember(f) {
@@ -512,7 +459,7 @@ function renderStatsMember(f) {
   const dispM=months.map(l=>{ const [y,m]=l.split('-'); return new Date(y,m-1).toLocaleString('default',{month:'short',year:'2-digit'}); });
   const datasets=allM.map((m,i)=>({ label:m, data:months.map(mo=>f.filter(s=>s.date.startsWith(mo)&&s.attendees.includes(m)).length), backgroundColor:CHART_COLORS[i%CHART_COLORS.length], borderRadius:2, stack:'stack' }));
   if (chartMemberTrend) chartMemberTrend.destroy();
-  chartMemberTrend = new Chart(document.getElementById('member-trend-chart'),{ type:'bar', data:{ labels:dispM, datasets }, options:{ responsive:true, maintainAspectRatio:false, plugins:{ legend:{ position:'bottom', labels:{ color:'#4A3F2F', font:{size:12}, boxWidth:12, padding:12 } } }, scales:{ y:{stacked:true,beginAtZero:true,ticks:{stepSize:1,color:'#8C7B65'},grid:{color:'#E8DCC8'}}, x:{stacked:true,ticks:{color:'#8C7B65',autoSkip:false,maxRotation:45},grid:{display:false}} } } });
+  chartMemberTrend = new Chart(document.getElementById('member-trend-chart'),{ type:'bar', data:{ labels:dispM, datasets }, options:{ responsive:true, maintainAspectRatio:false, plugins:{ legend:{ position:'bottom', labels:{ color:'#4A3F2F', font:{size:12}, boxWidth:12, padding:12 } } }, scales:{ y:{stacked:true,beginAtZero:true,ticks:{stepSize:1,color:'#8C7B65'},grid:{color:'#E8DCC8'}}, x:{stacked:true,ticks:{color:'#8C7B65'},grid:{display:false}} } } });
 }
 
 function renderStatsVenue(f) {
@@ -528,7 +475,6 @@ function renderStatsVenue(f) {
   chartVenuePints = new Chart(document.getElementById('venue-pints-chart'),{ type:'bar', data:{ labels:venues, datasets:[{ data:venues.map(v=>vP[v]), backgroundColor:'#D4801A', borderRadius:4 }] }, options:{ indexAxis:'y', responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{ x:{beginAtZero:true,ticks:{color:'#8C7B65'},grid:{color:'#E8DCC8'}}, y:{ticks:{color:'#8C7B65'},grid:{display:false}} } } });
 }
 
-// ── Leaderboard ────────────────────────────────────────
 window.setLbPeriod = function(p, btn) {
   currentLbPeriod = p;
   document.querySelectorAll('#lb-period-row .period-btn').forEach(b=>b.classList.remove('active'));
@@ -548,13 +494,12 @@ function renderLeaderboard() {
     const max=sorted[0]?.[1]||1;
     const el=document.getElementById(containerId);
     if (!sorted.length||sorted.every(([,v])=>v===0)) { el.innerHTML='<div class="empty">No data yet</div>'; return; }
-    el.innerHTML=sorted.map(([name,val],i)=>`<div class="lb-row"><div class="lb-rank ${rankClass(i)}">${medals[i]||i+1}</div><div class="lb-name">${name}</div><div class="lb-bar-wrap"><div class="lb-bar" style="width:${Math.round(val/max*100)}%"></div></div><div class="lb-val">${val}</div></div>`).join('');
+    el.innerHTML=sorted.map(([name,val],i)=>'<div class="lb-row"><div class="lb-rank '+rankClass(i)+'">'+(medals[i]||i+1)+'</div><div class="lb-name">'+name+'</div><div class="lb-bar-wrap"><div class="lb-bar" style="width:'+Math.round(val/max*100)+'%"></div></div><div class="lb-val">'+val+'</div></div>').join('');
   }
   renderLb('lb-attendance', att);
   renderLb('lb-pints', pints);
 }
 
-// ── Init ───────────────────────────────────────────────
 document.getElementById('log-date').valueAsDate = new Date();
 </script>
 </body>
